@@ -1,0 +1,265 @@
+@import '@/lib/reset.scss';
+
+html, body, #root, .container {
+    @include rect(100%, 100%);
+}
+
+.container {
+    @include flexbox();
+    @include flex-direction(column);
+    .main {
+        @include flex();
+        @include rect(100%, auto);
+        @include flexbox();
+        @include flex-direction(column);
+        .header {
+            @include rect(100%, 0.5rem)
+            @include background-color(#F8F8F8);
+            @include flexbox();
+            @include justify-content();
+            @include align-items();
+             .left{
+                @include flexbox();
+                @include rect(0.8rem, 100%);
+                @include justify-content();
+                @include align-items();
+                img {
+                    @include rect(auto, 0.22rem);
+                }
+            }
+            .center{
+                @include flex();
+                @include flexbox();
+                @include rect(100%, 100%);
+                @include justify-content();
+                @include align-items();
+                input {
+                    @include rect(100%, 0.3rem);
+                    border: 1px solid #ccc;
+                    border-radius:0.05rem ;
+                }
+            }
+            .right{
+                @include flexbox();
+                @include rect(0.5rem, 100%);
+                @include justify-content();
+                @include align-items();
+                i {
+                    @include font-size(0.26rem)
+                }
+            }
+						.L{
+							@include flexbox();
+							@include rect(0.3rem, 100%);
+							@include justify-content();
+							@include align-items();
+							@include font-size(0.24rem)
+						}
+						.C{
+							@include flex();
+							@include flexbox();
+							@include rect(100%, 100%);
+							@include justify-content();
+							@include align-items();
+							@include font-size(0.2rem)
+
+						}
+						.R{
+							@include flexbox();
+							@include rect(0.5rem, 100%);
+							@include justify-content();
+							@include align-items();
+							@include font-size(0.3rem)
+               
+						}
+        }
+        
+        .content {
+            @include flex();
+            @include rect(100%, auto);
+            @include flexbox();
+            @include flex-direction(column);
+            @include overflow();
+            .ProList{
+            		@include rect(100%, auto);                   
+            		.goodslist{
+            				@include rect(100%, 100%);
+            				@include flexbox();
+            				flex-wrap: wrap;                        
+            				li{
+            						@include rect(47%, 50%);
+            						margin: 0.1rem 1% 0 2%;
+            					@include background-color(#fff);
+            						.goodspic{                               
+            								img{
+            										@include rect(1.7625rem, 1.7625rem);
+            								}                                
+            						}
+            						.goodsinfo{
+            								@include rect(1.675rem, auto);
+            								@include font-size(0.08rem);
+            								color: #000000;
+            								dt{
+            										@include rect(100%, 0.5rem);
+            										@include line-height(0.16rem);
+            										@include overflow();
+            										@include border(0 0 1px 0, #ccc);
+            								}
+            								dd{
+            										@include rect(100%, 0.3rem);
+            										@include font-size(0.15rem);
+            										@include line-height(0.4rem);
+            										color: red;
+            								}
+            						}
+            				}
+            		}
+            }
+            .TypeText {                
+                @include rect(100%, 0.35rem);
+                display: -webkit-box;
+                p {
+                    @include rect(0.5rem,0.35rem);
+                    @include text-align();
+                    @include line-height(0.35rem);                   
+                }
+                ul{
+                    @include flex();
+                    @include line-height(0.35rem);
+                    li{
+                        @include rect(100%, 0.35rem);
+                    }
+                }
+            }
+           
+           .HomeNav{
+               @include rect(100%, 0.75rem);
+               ul{
+                   @include rect(100%, 100%);
+                   @include flexbox();
+                   li{
+                       @include rect(100%, 100%);
+                       img{
+                           @include rect(0.75rem, 0.75rem);
+                        }
+                    }
+                }
+            }
+            
+            .NNC, .BrandSale, .HotTop10{
+                @include rect(100%, auto);
+               
+                .SmBd{
+                    @include rect(100%, auto);
+                    margin-top: 0.1rem;
+                    img{
+                        @include rect(100%, 0.293rem);
+                    }
+                }
+                .BigBd{
+                    @include rect(100%, auto);
+                    img{
+                        @include rect(100%, 1.523rem);
+                    }
+                }
+                .ProList{
+                    @include rect(100%, auto);                   
+                    .goodslist{
+                        @include rect(100%, 100%);
+                        @include flexbox();
+                        flex-wrap: wrap;                        
+                        li{
+                            @include rect(47%, 50%);
+                            margin: 0.1rem 1% 0 2%;
+                           @include background-color(#fff);
+                            .goodspic{                               
+                                img{
+                                    @include rect(1.7625rem, 1.7625rem);
+                                }                                
+                            }
+                            .goodsinfo{
+                                @include rect(1.675rem, auto);
+                                @include font-size(0.08rem);
+                                color: #000000;
+                                dt{
+                                    @include rect(100%, 0.5rem);
+                                    @include line-height(0.16rem);
+                                    @include overflow();
+                                    @include border(0 0 1px 0, #ccc);
+                                }
+                                dd{
+                                    @include rect(100%, 0.3rem);
+                                    @include font-size(0.15rem);
+                                    @include line-height(0.4rem);
+                                    color: red;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .BdPic{
+               @include rect(100%, auto); 
+               img{
+                   @include rect(100%, 1.5235rem); 
+               }
+            } 
+						.imglist{
+							//@include rect(100%, 100%); 
+
+							img{
+								@include rect(100%, 100%);
+							}
+						}
+        }//content
+        
+        .footer{
+            @include rect(100%, auto);           
+            @include background-color(#fff);
+            margin-top:0.1rem ;
+            .f-top{
+                @include rect(100%, auto)
+                ul{
+                    @include flexbox();
+                    li{
+                        @include flex();
+                        @include rect(100%, 0.4rem);
+                        @include text-align();
+                        @include line-height(0.4rem);
+                        @include text-color(#000)
+                        a{
+                            @include text-color(#000)
+                        }
+                    }
+                }
+            }
+            .f-cen{
+                @include rect(100%, auto);
+                padding: 0 0.44rem;
+                border-top: 1px solid #ECF0F5;
+                ul{
+                    @include rect(100%, auto);
+                    @include flexbox();
+                    li{ 
+                        @include text-align();                                            
+                        @include rect(100%, auto);
+                        a{
+                            @include text-color(#000)
+                            i{
+                                @include font-size(0.3rem);
+                            }
+                        }                        
+                    }
+                }
+            }
+            .f-bom{
+                @include rect(100%, 0.4rem);
+                border-top: 1px solid #ECF0F5;
+                @include text-align(); 
+                @include line-height(0.4rem);
+                @include font-size(0.08rem);
+            }
+        }
+        
+    }//main
+}//container
